@@ -5,3 +5,4 @@ I am modifing it for my use cases. But if it also fit your cases, feel free to t
 # Change Log
 
  - Fix game objects will modified its local scale while parent been set.
+ - Add Example Scene and Views.
