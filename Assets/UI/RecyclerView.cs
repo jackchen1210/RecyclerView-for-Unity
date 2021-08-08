@@ -507,9 +507,8 @@ namespace UI
                     }
                 }
 
-                Grid.transform.SetParent(recyclerView.transform);
+                Grid.transform.SetParent(recyclerView.transform,false);
                 GridRectTransform.anchoredPosition = Vector3.zero;
-
 
                 ScrollRect = recyclerView.GetComponent<ScrollRect>();
                 if (ScrollRect == null)
@@ -842,7 +841,7 @@ namespace UI
 
             public void AttachToGrid(IViewHolderInfo vh, bool up)
             {
-                vh.ItemView.transform.SetParent(Grid.transform);
+                vh.ItemView.transform.SetParent(Grid.transform,false);
                 if (up)
                 {
                     vh.ItemView.transform.SetAsLastSibling();
@@ -1172,7 +1171,7 @@ namespace UI
             GameObject script = new GameObject();
             script.name = name;
             script.AddComponent<RectTransform>();
-            script.transform.SetParent(canvas.transform);
+            script.transform.SetParent(canvas.transform,false);
             CreateScript(script);
             return script.transform;
         }
